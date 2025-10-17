@@ -1,9 +1,10 @@
 import "./App.css";
 
-const Card = () => {
+const Card = ({title, rating}) => {
   return (
-    <div>
-      <h2>Card</h2>
+    <div className="card">
+      <h2>{title}</h2>
+      <h2>{rating}</h2>
     </div>
   )
 }
@@ -20,9 +21,9 @@ function App() {
   return (
     <>
       <FunctionalComponent />
-      <Card />
-      <Card />
-      <Card />
+      <Card title = {"Avatar"} rating = { 5}/>
+      <Card title = {"Avenger"} rating = { 4}/>
+      <Card title = {"Spicy"} rating = { 3}/>
     </>
   )
 }
